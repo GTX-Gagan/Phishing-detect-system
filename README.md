@@ -1,2 +1,2 @@
-# Phishing-detect-system
-Phishing detect system 
+# Phishing-Detect-System
+Phishing Detect System [Measuring and identifying suspicious email or messages to prevent cyber attacks]
