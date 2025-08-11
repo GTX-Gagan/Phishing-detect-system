@@ -1,73 +1,81 @@
-Phishing Detection System 🔍🛡️
-https://via.placeholder.com/800x200.png?text=Phishing+Detection+System+-+Secure+Your+Online+Presence
+# Phishing Detection System
 
-A powerful AI-driven phishing detection system designed to identify and block malicious phishing websites in real-time. Protect yourself and your users from fraudulent links with advanced machine learning techniques.
+A machine learning-based system to detect phishing websites by analyzing various website features.
 
-✨ Features
+![Phishing Detection](https://img.shields.io/badge/Project-Phishing%20Detection-blue)
+![Python](https://img.shields.io/badge/Language-Python-green)
+![Machine Learning](https://img.shields.io/badge/ML-Random%20Forest-orange)
 
-✅ Real-time URL Analysis – Instantly checks if a website is phishing or legitimate.
-✅ Machine Learning Model – Uses trained algorithms to detect suspicious patterns.
-✅ User-Friendly Interface – Simple and intuitive for seamless integration.
-✅ High Accuracy – Reduces false positives with optimized detection techniques.
-✅ API Support – Easily integrate into your applications for automated scanning.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dataset](#dataset)
+- [Model](#model)
+- [Contributing](#contributing)
 
-🚀 How It Works
+## Introduction
+This project aims to detect phishing websites using machine learning techniques. It analyzes various website features like URL structure, domain information, and page content to classify websites as legitimate or phishing.
 
-Input a URL – Enter the suspicious link into the system.
-AI Analysis – The model evaluates the website’s features (domain, SSL, content, etc.).
-Detection Result – Returns a verdict: Safe 🟢 or Phishing 🔴.
-🛠️ Installation
+## Features
+- URL-based feature extraction
+- Domain-based analysis
+- Content-based features
+- Machine learning classification
+- Real-time prediction capability
 
-Prerequisites
+## Installation
 
-Python 3.8+
-Pip (Python Package Manager)
-Steps
+1. Clone the repository:
+git clone https://github.com/GTX-Gagan/Phishing-detect-syst.git
+cd Phishing-detect-syst
 
-Clone the repository:
-bash
-git clone https://github.com/GTX-Gagan/Phishing-detect-system.git
-cd Phishing-detect-system
-Install dependencies:
-bash
+2.Install required packages:
 pip install -r requirements.txt
-Run the application:
-bash
-python app.py
-Open in browser:
-text
-http://localhost:5000
-📊 Model Performance
 
-Metric	Score
-Accuracy	98%
-Precision	97%
-Recall	96%
-F1-Score	96.5%
-📂 Project Structure
+## Usage
+1.To train the model:
+python train.py
 
-text
-Phishing-detect-system/
-├── model/                # Trained ML model
-├── static/               # CSS/JS files
-├── templates/            # HTML files
-├── app.py                # Flask application
-├── requirements.txt      # Dependencies
-└── README.md             # Project documentation
-🤝 Contributing
+2.To make predictions on a single URL:
+python predict.py --url "http://example.com"
 
-We welcome contributions! Feel free to:
-🔹 Report bugs (Open an Issue)
-🔹 Suggest features (Create a Feature Request)
-🔹 Submit Pull Requests (Improve the model/UI)
+3.For batch prediction (CSV file with URLs):
+python predict.py --input urls.csv --output results.csv
 
-📜 License
+## Dataset
+The model is trained on a dataset containing both legitimate and phishing websites. The dataset includes features like:
 
-This project is licensed under MIT License – see LICENSE for details.
+URL length
 
-📞 Contact
+Presence of special characters
 
-Gagan
-📧 Email: deepgagan14568@gmail.com
-🌐 GitHub: GTX-Gagan
+Domain age
 
+HTTPS certificate validity
+
+Page content characteristics
+
+## Model
+The system uses a <span style="color:#4CAF50;font-weight:bold">Random Forest classifier</span> trained on the phishing website dataset.
+
+| Metric    | Score |
+|-----------|-------|
+| Accuracy  | 95%   | 
+| Precision | 96%   |
+| Recall    | 94%   | 
+| F1-Score  | 95%   | 
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+Fork the project
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
